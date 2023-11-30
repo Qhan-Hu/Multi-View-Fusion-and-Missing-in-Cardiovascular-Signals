@@ -1,5 +1,5 @@
 # Multi-View-Fusion-View-Missing-in-Cardiovascular-Signals
-## Projection Overview
+## Project Overview
 This project aims to fuse two typical views of the cardiovascular system (ECG and PPG) with the proposed View-Centric Transformer(VCT) and multi-task masked autoencoders(M2AE). The prompt technique is introduced to handle common missing-view issues in real applications.
 ## Paper Status
 Currently, the related paper is under review. We apologize for the inconvenience as we are unable to provide a link to the code at this time
