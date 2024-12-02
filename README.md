@@ -2,7 +2,17 @@
 Official Implementation of *Neural Networks* paper " Efficient multi-view fusion and flexible adaptation to view missing in 
 cardiovascular system signals". You can access our paper [here](https://www.sciencedirect.com/science/article/pii/S0893608024006841)
 ## Introduction
-This paper examines two key issues in multi-view physiological signals: 1) how to effectively leverage large-scale unlabeled data to obtain multi-view fused representations, thereby advancing various downstream tasks in the healthcare field; 2) how to effectively mitigate the missing-view problem in a real-world application. Thus, we propose a View-Centric Transformer (VCT) coupled with a Multi-task Masked AutoEncoder (M2AE) to enhance multi-view fusion. Besides, we introduce, for the first time, a parameter-efficient fine-tuning prompt learning technique designed to alleviate view missing. The experiment involves two typical signals: PPG and ECG and various tasks: blood pressure estimation, atrial fibrillation detection, and sleep stage classification.
+This paper examines two key issues in multi-view physiological signals: 1) how to effectively leverage large-scale unlabeled data to obtain multi-view fused representations, thereby advancing various downstream tasks in the healthcare field; 2) how to effectively mitigate the missing-view problem in a real-world application. Thus, we propose a **View-Centric Transformer (VCT)** coupled with a **Multi-task Masked AutoEncoder (M2AE)** to enhance multi-view fusion. Besides, we introduce, for the first time, a parameter-efficient fine-tuning prompt learning technique designed to alleviate view missing. The experiment involves two typical signals: **PPG** and **ECG** and various tasks: **blood pressure estimation**, **atrial fibrillation detection**, and **sleep stage classification**.
+<div align="center">
+  <img src="figs/M2AE.png"/>
+  <p><em>Figure 1: Multitask Masked Autoencoder</em></p>
+</div>
+
+<div align="center">
+  <img src="figs/MAP.png"/>
+  <p><em>Figure 2: Missing-Aware Prompt</em></p>
+</div>
+
 ## Environment
 ### Prerequisites
 Python==3.7.13<br>torch==1.10.0<br>pytorch-lightning==1.1.4<br>torchmetrics==0.9.3<br>transformers==4.2.1
@@ -36,9 +46,11 @@ python main.py with data_root=<ARROW_ROOT> \
         exp_name=<EXP_NAME> \
         test_only=True     
 ```
-The pretrained model can be downloaded [here]()
+The pretrained model can be downloaded [here](https://1drv.ms/u/c/299cf8fe2e3c4bc6/ER2FfZJKDS5MnRWUGNdSyt8BiPtniYa8C-SBqsZ7Mw0EJg?e=674Zkb)
 ## Citation
 If you find this work useful for your research, please cite:<br>
 ``Hu Q, Wang D, Wu H, et al. Efficient multi-view fusion and flexible adaptation to view missing in cardiovascular system signals[J]. Neural Networks, 2025, 181: 106760.``
+## Acknowledgements
+Thanks for the inspiration from [ViLT](https://github.com/dandelin/ViLT), [M3AE](https://github.com/zhjohnchan/M3AE), and [Prompt](https://github.com/YiLunLee/missing_aware_prompts)
 
 
